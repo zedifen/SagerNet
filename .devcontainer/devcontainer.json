@@ -1,0 +1,32 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/devcontainers-contrib/features/kotlin-sdkman:latest": {},
+    "ghcr.io/devcontainers/features/go:latest": {}
+  }
+}
+
+/*
+
+# Install command line tools if have no Android SDK
+
+export ANDROID_HOME=/home/vscode/android_home/
+
+mkdir $ANDROID_HOME
+cd $ANDROID_HOME
+
+curl -LO "https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip"
+unzip -q *.zip
+rm *.zip
+mv cmdline-tools latest
+mkdir cmdline-tools/
+mv latest cmdline-tools/
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
+
+sdkmanager 'ndk;25.2.9519653'
+
+# git submodule init
+# git submodule update --depth=1
+
+*/
